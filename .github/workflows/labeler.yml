@@ -1,0 +1,13 @@
+name: Labeler
+on:
+  issues:
+    types: [labeled, unlabeled]
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+    name: Labeler
+    steps:
+      - uses: pytorch/labeler-github-action@releases/v1
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
