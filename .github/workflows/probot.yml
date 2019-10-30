@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Labeler
     steps:
-      - uses: pytorch/pytorch-probot@releases/v1
+      - uses: pytorch/pytorch-probot@releases/v2
         env:
           GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
