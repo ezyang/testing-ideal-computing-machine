@@ -1,0 +1,13 @@
+name: Probot
+on:
+  issues:
+    types: [opened, labeled, unlabeled]
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+    name: Labeler
+    steps:
+      - uses: pytorch/pytorch-probot@releases/v2
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
